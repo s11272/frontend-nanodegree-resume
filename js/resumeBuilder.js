@@ -33,3 +33,34 @@ var newArray = [];
 newArray[newArray.length-1] = newArray[newArray.length-1]+1
 
 console.log(newArray[2])
+
+var skills = ["terefere", "hahahah", "ojtam ojtam"];
+
+var bio = {
+  "name" : "Czczcz",
+  "role" : "srutututu",
+  "contacts" : {
+    "mobile" : "650 500 000",
+    "email" : "john@egzample.xom",
+    "github" : "www.githum/madafaka",
+    "twitter" : "elementary",
+    "location" : "san francisco"
+  },
+  "WelcomeMessage" : "Welcome!!!",
+  "skills" : ["awsomnes", "holahola", "srutututut"],
+  "biopic" : "images/and.jpg"
+};
+
+HTMLheaderName = HTMLheaderName.replace("%data%", bio.name);
+HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
+HTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+HTMLbioPic = HTMLbioPic.replace("%data%", bio.biopic);
+HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.WelcomeMessage);
+HTMLskills = HTMLskills.replace("%data%", bio.skills);
+
+$("#header").append(HTMLheaderName);
+$("#header").append(HTMLheaderRole);
+$("#header").append(HTMLbioPic);
+$("#header").append(HTMLmobile);
+$("#header").append(HTMLwelcomeMsg);
+$("#header").append(HTMLskills);
